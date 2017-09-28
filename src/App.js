@@ -24,6 +24,7 @@ class App extends Component {
     var searchUrl = url + query
     axios.get(searchUrl)
       .then(function(response) {
+        console.log(response.data.results)
         self.showResults(response.data)
       })
       .catch(function(error) {
@@ -41,7 +42,7 @@ class App extends Component {
   render() {
     return (
       <div>
-      <h1>MercadoSearch @ceballos1019</h1>      
+      <h1>MercadoSearch @ceballos1019</h1>
       <SearchBox search={this.search}/>
       <Result searchResults={this.state.searchResults}/>
       </div>

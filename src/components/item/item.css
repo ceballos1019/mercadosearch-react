@@ -1,0 +1,8 @@
+.card {
+  display: inline-block;
+  width: 30%;
+}
+
+.card-body {
+  white-space: normal;
+}

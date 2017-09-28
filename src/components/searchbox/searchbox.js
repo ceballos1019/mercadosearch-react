@@ -18,7 +18,7 @@ class SearchBox extends Component {
     return (
       <div>
         <input type="text" ref="query"/>
-        <input type="submit" onClick={this.test}/>
+        <input type="submit" onClick={this.test} value="Buscar"/>
       </div>
     );
   }
