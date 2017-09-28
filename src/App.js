@@ -4,7 +4,7 @@ import SearchBox from './components/searchbox/searchbox'
 import Result from './components/result/result'
 import axios from 'axios'
 
-const url2 = 'https://api.mercadolibre.com/sites/MCO/search?q=chromecast'
+const url = 'https://api.mercadolibre.com/sites/MCO/search?q='
 
 class App extends Component {
 
@@ -19,9 +19,10 @@ class App extends Component {
 
   }
 
-  search(url) {
+  search(query) {
     var self = this
-    axios.get(url2)
+    var searchUrl = url + query
+    axios.get(searchUrl)
       .then(function(response) {
         self.showResults(response.data)
       })
@@ -31,7 +32,6 @@ class App extends Component {
   }
 
   showResults(response) {
-    console.log("Estoy aca papo")
     this.setState({
       searchResults: response.results
     })
@@ -41,9 +41,8 @@ class App extends Component {
   render() {
     return (
       <div>
-      <h1>MercadoSearch @ceballos1019</h1>
-      <button onClick={this.search}>Push me</button>
-      <SearchBox/>
+      <h1>MercadoSearch @ceballos1019</h1>      
+      <SearchBox search={this.search}/>
       <Result searchResults={this.state.searchResults}/>
       </div>
     );
