@@ -19,11 +19,13 @@ class Item extends Component {
   render() {
     return (
        <article className="card">
-        <img src={this.props.itemThumbnail} alt="Item to sell"/>
-        <div className="card-body">
-          <h2>{this.props.itemTitle}</h2>
-          <p>{this.props.itemPrice}</p>
-          <p>{this.props.itemSoldQuantity}</p>
+       <div className="left-content">
+        <img className="item-thumbnail" src={this.props.itemThumbnail} alt="Item to sell"/>
+        <p className="item-sold-quantity">{this.props.itemSoldQuantity}</p>
+        </div>        
+        <div className="right-content">
+          <h2 className="item-title">{this.props.itemTitle}</h2>
+          <label className="price">{"$ " + this.props.itemPrice}</label>
         </div>
       </article>
 
