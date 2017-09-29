@@ -59,11 +59,13 @@ label.price {
   top: 140px;
   position: absolute;
   display: inline-block;
-  width: 120px;
+  width: 150px;
   height: 40px;
   line-height: 40px;
   font-size: 24px;
-  background: #FFDC40;
+  background: #3f3f3f;
+  /*FFDC40*/
+  color:#fff;
   text-shadow: rgba(255, 255, 255, 0.2) 1px 1px, rgba(255, 255, 255, 0.2) 1px 1px;
   -moz-border-radius: 0 3px 2px 0px;
   -webkit-border-radius: 0;
@@ -80,7 +82,7 @@ label.price:after {
   line-height: 0;
   border-width: 20px;
   border-style: solid;
-  border-color: #FFDC40 #FFDC40 #FFDC40 transparent;
+  border-color: #3f3f3f #3f3f3f #3f3f3f transparent;
 }
 label.price:before {
   content: '';
@@ -97,4 +99,11 @@ label.price:before {
   -ms-transform: skew(-5deg) rotate(-5deg);
   -webkit-transform: skew(-5deg) rotate(-5deg);
   transform: skew(-5deg) rotate(-5deg);
+}
+
+@media only screen and (max-device-width: 480px) {
+  .card {
+    width: 90%;
+    font-size: 1rem;
+  }
 }

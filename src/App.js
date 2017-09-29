@@ -41,10 +41,12 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-      <h1>MercadoSearch @ceballos1019</h1>
-      <SearchBox search={this.search}/>
-      <Result searchResults={this.state.searchResults}/>
+      <div className="app-content">
+        <div className="app-header">
+          <h1>MercadoSearch <a href="https://github.com/ceballos1019" target="_blank" rel="noopener noreferrer">@ceballos1019</a></h1>
+          <SearchBox search={this.search}/>
+        </div>
+        <Result className="app-body" searchResults={this.state.searchResults}/>
       </div>
     );
   }

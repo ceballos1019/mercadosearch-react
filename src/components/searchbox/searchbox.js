@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
+import './searchbox.css'
 
 class SearchBox extends Component {
 
@@ -16,9 +17,9 @@ class SearchBox extends Component {
 
   render() {
     return (
-      <div>
-        <input type="text" ref="query"/>
-        <input type="submit" onClick={this.test} value="Buscar"/>
+      <div className="searchbox-wrapper">
+        <input type="text" placeholder="Busca tu producto..." ref="query"/>
+        <button type="submit" onClick={this.test}>Buscar</button>
       </div>
     );
   }
