@@ -26,7 +26,7 @@
   height: inherit;
   padding: 10px;
   box-sizing: border-box;
-  background-color: lightblue;
+  background-color: #b0a18e;
 }
 
 .item-thumbnail {
@@ -34,7 +34,7 @@
 }
 
 .item-sold-quantity {
-  background: #F65A5B ;
+  background: #49412c ;
   color: #fff;
   cursor: pointer;
   display: inline-block;
