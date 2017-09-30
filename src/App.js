@@ -14,17 +14,18 @@ class App extends Component {
       searchResults: []
     }
 
+    this.search('fz');
+
     this.search = this.search.bind(this)
     this.showResults = this.showResults.bind(this)
 
   }
 
-  search(query) {
+  search(query) {    
     var self = this
     var searchUrl = url + query
     axios.get(searchUrl)
       .then(function(response) {
-        console.log(response.data.results)
         self.showResults(response.data)
       })
       .catch(function(error) {

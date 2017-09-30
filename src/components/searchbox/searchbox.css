@@ -1,12 +1,11 @@
 .searchbox-wrapper {
-  padding: 15px;    
+  padding: 15px;
 }
 
 .searchbox-wrapper input {
-
   height: 20px;
   padding: 10px 5px;
-  font: bold 15px 'lucida sans', 'trebuchet MS', 'Tahoma';
+  font: 15px 'Roboto', 'trebuchet MS', 'Tahoma';
   border: 0;
   background: #eee;
   -moz-border-radius: 3px 0 0 3px;
@@ -30,7 +29,7 @@
   cursor: pointer;
   height: 40px;
   width: 110px;
-  font: bold 15px/40px 'lucida sans', 'trebuchet MS', 'Tahoma';
+  font: bold 15px/40px 'Roboto', 'trebuchet MS', 'Tahoma';
   color: #fff;
   text-transform: uppercase;
   background: #d83c3c;
@@ -53,4 +52,11 @@
   border-color: transparent #d83c3c transparent;
   top: 12px;
   left: -6px;
+}
+
+@media only screen and (max-device-width: 440px) {
+  .searchbox-wrapper input {
+    padding: 10px 5px;
+    width: 50%;
+  }
 }

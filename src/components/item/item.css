@@ -106,4 +106,20 @@ label.price:before {
     width: 90%;
     font-size: 1rem;
   }
+
+  .left-content {
+    width: 30%;
+  }
+
+  .right-content {
+    width: 60%;
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-device-width: 760px) {
+  .card {
+    width: 90%;
+    font-size: 1rem;
+  }
 }
